@@ -8,4 +8,14 @@ class HomeController extends BaseController
     {
         return view('home/index');
     }
+
+    public function sobre()
+    {
+        return view('home/sobre');
+    }
+
+    public function produtos()
+    {
+        return view('home/produtos');
+    }
 }
