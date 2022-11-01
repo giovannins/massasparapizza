@@ -16,8 +16,8 @@
                         <p class="card-text">R$<?= $item['valor'] ?> - <?= $item['quantidade'] ?> Unidade(s)</p>
                         <hr />
                         <div class="text-end">
-                            <a href="/" class="btn btn-warning"><i class="bi bi-pencil-fill"></i> Editar</a>
-                            <button href="/" class="btn btn-danger" onclick="deletar(<?= $item['id'] ?>)" id="delete"><i class="bi bi-x-lg"></i> Deletar</button>
+                            <a href="/admin/painel/editar/<?= $item['id'] ?>" class="btn btn-warning"><i class="bi bi-pencil-fill"></i> Editar</a>
+                            <button class="btn btn-danger" onclick="deletar(<?= $item['id'] ?>)" id="delete"><i class="bi bi-x-lg"></i> Deletar</button>
                         </div>
                     </div>
                 </div>

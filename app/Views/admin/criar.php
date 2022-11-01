@@ -46,7 +46,7 @@
 
         <div class="col-md-6">
             <div class="text-center">
-                <h5 class="display-5">Preview</h5>
+                <h5 class="display-5">Pré-visualização</h5>
             </div>
             <div class="card m-2">
                 <img src="/imgs/" class="card-img-top" id="img_p" height="260px" width="400" />
