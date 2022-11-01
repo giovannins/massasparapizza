@@ -17,4 +17,15 @@ class AdminController extends BaseController
         $produtosModel = new ProdutoModel();
         return view('admin/painel.php', ['produtos' => $produtosModel->findAll()]);
     }
+
+    public function editar($id)
+    {
+        $produtosModel = new ProdutoModel();
+        return view('admin/painel.php', ['produtos' => $produtosModel->find($id)]);
+    }
+
+    public function criar()
+    {
+        return view('admin/criar.php');
+    }
 }
