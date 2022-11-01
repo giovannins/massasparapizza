@@ -24,16 +24,15 @@ class ProdutoMigration extends Migration
                 'constraint' => 255,
             ],
             'img' => [
-                'type' => 'varchar',
-                'constraint' => 255,
+                'type' => 'text',
             ],
             'tamanho' => [
                 'type' => 'varchar',
                 'constraint' => 255,
             ],
             'valor' => [
-                'type' => 'float',
-                'constraint' => 8,
+                'type' => 'varchar',
+                'constraint' => 50,
             ],
             'quantidade' => [
                 'type' => 'int',
