@@ -17,7 +17,7 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('HomeController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -41,6 +41,7 @@ $routes->get('/produtos', 'HomeController::produtos');
 
 // Admin
 $routes->get('/admin', 'AdminController::index');
+$routes->get('/admin/painel', 'AdminController::painel');
 
 /*
  * --------------------------------------------------------------------
