@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\ProdutoModel;
+
 class HomeController extends BaseController
 {
     public function index()
@@ -16,6 +18,7 @@ class HomeController extends BaseController
 
     public function produtos()
     {
-        return view('home/produtos');
+        $produtosModel = new ProdutoModel();
+        return view('home/produtos', ['produtos' => $produtosModel->findAll()]);
     }
 }
