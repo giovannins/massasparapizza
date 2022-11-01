@@ -42,6 +42,13 @@ $routes->get('/produtos', 'HomeController::produtos');
 // Admin
 $routes->get('/admin', 'AdminController::index');
 $routes->get('/admin/painel', 'AdminController::painel');
+$routes->get('/admin/painel/criar', 'AdminController::criar');
+$routes->get('/admin/painel/editar/(:num)', 'AdminController::editar/$1');
+
+// API
+$routes->post('/admin/api/store', 'Api\ProdutosController::store');
+$routes->put('/admin/api/update/(:num)', 'Api\ProdutosController::update/$1');
+$routes->delete('/admin/api/delete/(:num)', 'Api\ProdutosController::delete/$1');
 
 /*
  * --------------------------------------------------------------------
