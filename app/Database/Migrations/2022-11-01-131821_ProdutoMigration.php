@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class ItemMigration extends Migration
+class ProdutoMigration extends Migration
 {
     public function up()
     {
@@ -15,9 +15,21 @@ class ItemMigration extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
+            'titulo' => [
+                'type' => 'varchar',
+                'constraint' => 255,
+            ],
+            'descricao' => [
+                'type' => 'varchar',
+                'constraint' => 255,
+            ],
+            'img' => [
+                'type' => 'varchar',
+                'constraint' => 255,
+            ],
             'tamanho' => [
-                'type' => 'int',
-                'constraint' => 8,
+                'type' => 'varchar',
+                'constraint' => 255,
             ],
             'valor' => [
                 'type' => 'float',
@@ -29,11 +41,11 @@ class ItemMigration extends Migration
             ],
         ]);
         $this->forge->addKey('id', true, true);
-        $this->forge->createTable('itens');
+        $this->forge->createTable('produtos');
     }
 
     public function down()
     {
-        $this->forge->dropTable("itens");
+        $this->forge->dropTable('produtos');
     }
 }
