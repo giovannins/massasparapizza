@@ -17,7 +17,7 @@ class CategoriasSeeder extends Seeder
             6 => ['tamanho' => '35cm - tradicional'],
         ];
         foreach ($data as $value) {
-            $this->db->table('categorias')->insert($value);
+            $this->db->table('produtos')->insert($value);
         }
     }
 }
