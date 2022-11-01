@@ -10,9 +10,14 @@
     <title>Massas para pizza</title>
 </head>
 <body>
-    <?= $this->renderSection('conteudo') ?>
-    
+    <style>
+        body {
+            background-image: url(/imgs/fundop&b20op.jpg);
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <?= $this->renderSection('conteudo') ?>    
 </body>
 </html>
