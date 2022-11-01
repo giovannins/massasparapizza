@@ -41,6 +41,7 @@ $routes->get('/produtos', 'HomeController::produtos');
 
 // Admin
 $routes->get('/admin', 'AdminController::index');
+$routes->post('/admin/login', 'AdminController::login');
 $routes->get('/admin/painel', 'AdminController::painel');
 $routes->get('/admin/painel/criar', 'AdminController::criar');
 $routes->get('/admin/painel/editar/(:num)', 'AdminController::editar/$1');
