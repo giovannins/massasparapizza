@@ -9,6 +9,10 @@ class ProdutosController extends BaseController
 {
     public function store()
     {
+        $session = session();
+        if (!$session->get('is_login')) {
+            return $this->response->setStatusCode(403);
+        }
         $produtoModel = new ProdutoModel();
         if ($this->validate([
             'titulo' => 'required',
@@ -33,6 +37,10 @@ class ProdutosController extends BaseController
 
     public function update($id)
     {
+        $session = session();
+        if (!$session->get('is_login')) {
+            return $this->response->setStatusCode(403);
+        }
         $produtoModel = new ProdutoModel();
         if ($this->validate([
             'titulo' => 'required',
@@ -57,6 +65,10 @@ class ProdutosController extends BaseController
 
     public function delete($id)
     {
+        $session = session();
+        if (!$session->get('is_login')) {
+            return $this->response->setStatusCode(403);
+        }
         $produtosModel = new ProdutoModel();
         if ($produtosModel->find($id)) {
             $produtosModel->delete($id);
