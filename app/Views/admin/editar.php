@@ -38,7 +38,7 @@
                             <input type="text" class="form-control" id="quantidade" name="quantidade" value="<?= $produtos['quantidade']?>">
                         </div>
                         <div class="text-end">
-                            <button class="btn btn-success"><i class="bi bi-plus-lg"></i> Atualizar produto</button>
+                            <button class="btn btn-success"><i class="bi bi-check-lg"></i> Atualizar produto</button>
                         </div>
                     </form>
                 </div>
